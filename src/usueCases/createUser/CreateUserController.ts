@@ -1,5 +1,5 @@
-import { Request, Response } from 'express';
-import { CreateUserUseCase } from './CreateUseruseCase';
+import { Request, Response } from "express";
+import { CreateUserUseCase } from "./CreateUserUseCase";
 
 class CreateUserController {
   async handle(request: Request, response: Response) {
@@ -9,7 +9,7 @@ class CreateUserController {
 
     const user = await createUserUseCase.execute({
       username,
-      name, 
+      name,
       password,
     });
 
@@ -17,4 +17,4 @@ class CreateUserController {
   }
 }
 
-export { CreateUserController }
+export { CreateUserController };
